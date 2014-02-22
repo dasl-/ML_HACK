@@ -5,8 +5,7 @@ class Midilooper_Bus {
     public:
         Midilooper_Bus();
     
-        void send(byte, byte[]);
-        void get();
+        void run(byte, byte[]);
     
     private:
         int test;

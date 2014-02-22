@@ -8,9 +8,6 @@ const int Midilooper_Channel::MAX_LOOPS;
 
 const int DEBOUNCE_LENGTH = 200;
 
-int _rec_count = 0;
-int last_state;
-
 /*
  * Constructor
  */
@@ -160,7 +157,6 @@ int Midilooper_Channel::getRecordButtonState() {
             _recording_control_state = return_state;
         }
         _start = true;
-        last_state = current_state;
     } else {
         //good bouncing
         return_state = _recording_control_state;
