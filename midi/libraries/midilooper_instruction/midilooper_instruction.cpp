@@ -12,19 +12,19 @@ const byte Midilooper_Instruction::NOTE_OFF;
  * Empty Constructor
  */
 Midilooper_Instruction::Midilooper_Instruction() {
-    
+
 }
 
 /*
  * Constructor
  */
 Midilooper_Instruction::Midilooper_Instruction(Midilooper_Bus bus, int channel, byte instruction_type, byte args[]) {
-    
+
     _bus = bus;
     _channel = channel;
     _instruction_type = instruction_type;
     setArguments(args);
-    
+
     _bus.run(_instruction_type, _args);
 }
 
@@ -37,7 +37,7 @@ void Midilooper_Instruction::run() {
     } else if (_instruction_type == NOTE_OFF) {
         sendNoteOff(_args[0], _args[1]);
     }
-    
+
     _bus.run(_instruction_type, _args);
 }
 
@@ -59,12 +59,12 @@ void Midilooper_Instruction::setArguments(byte args[]) {
  * Send the note on command to midi out
  */
 void Midilooper_Instruction::sendNoteOn(byte pitch, byte velocity) {
-    MIDI.sendNoteOn(pitch, velocity, _channel);
+    // MIDI.sendNoteOn(pitch, velocity, _channel);
 }
 
 /*
  * Send the note off command to midi out
  */
 void Midilooper_Instruction::sendNoteOff(byte pitch, byte velocity) {
-    MIDI.sendNoteOff(pitch, velocity, _channel);
+    // MIDI.sendNoteOff(pitch, velocity, _channel);
 }

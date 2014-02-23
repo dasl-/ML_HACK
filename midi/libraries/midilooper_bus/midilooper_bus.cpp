@@ -12,9 +12,9 @@ Midilooper_Bus::Midilooper_Bus() {
  * @param args             [
  */
 void Midilooper_Bus::run(byte instruction_type, byte args[]) {
-    red = random(8);
-    green = random(8);
-    blue = random(8);
+    byte red = random(8);
+    byte green = random(8);
+    byte blue = random(8);
 
     while (red + green + blue <= 2) {
         red = random(8);
@@ -28,7 +28,7 @@ void Midilooper_Bus::run(byte instruction_type, byte args[]) {
 
 
     while (flash.instruction_step <= flash.instruction_length + 10) {
-        flashColor_runStripInstruction();
+        flash.flashColor_runStripInstruction();
     }
     // delay(tempo);
 
