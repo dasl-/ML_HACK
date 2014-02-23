@@ -21,7 +21,11 @@ float ramp_time = 50;
 int base_pixel = 8;
 
 /** @type {Number} control the delay() times */
+<<<<<<< HEAD
 int tempo = 400;
+=======
+int tempo = 500;
+>>>>>>> 1ee3deb590dfec0865c8a1ed35b74e690f5ddf07
 
 #include <Adafruit_NeoPixel.h>
 Adafruit_NeoPixel strip_1 = Adafruit_NeoPixel(21, 6, NEO_GRB + NEO_KHZ800);
