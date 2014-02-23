@@ -2,6 +2,14 @@ unsigned long instruction_start = 0;
 unsigned long instruction_step = 0;
 unsigned long instruction_length = 0;
 unsigned long instruction_start_val = 0;
+
+/**
+ * 0: pitch
+ * 1: velocity
+ * 2: red
+ * 3: green
+ * 4: blue
+ */
 int instruction_args[5];
 int pixels;
 
@@ -13,7 +21,7 @@ float ramp_time = 50;
 int base_pixel = 8;
 
 /** @type {Number} control the delay() times */
-int tempo = 500;
+int tempo = 400;
 
 #include <Adafruit_NeoPixel.h>
 Adafruit_NeoPixel strip_1 = Adafruit_NeoPixel(21, 6, NEO_GRB + NEO_KHZ800);
